@@ -27,3 +27,17 @@ Happy modeling!
 [0m16:44:18.405294 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1052a43e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1052c0cb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105208490>]}
 [0m16:44:18.405450 [debug] [MainThread]: Flushing usage events
 [0m16:44:18.950359 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:50:56.616631 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 19:50:56.630059 | a39a4f49-489a-45b9-b7de-72f950da73ed ==============================
+[0m19:50:56.630059 [info ] [MainThread]: Running with dbt=1.11.7
+[0m19:50:56.630509 [debug] [MainThread]: running dbt with arguments {'log_path': 'logs', 'use_colors': 'True', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'empty': 'None', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'warn_error': 'None', 'profiles_dir': '/Users/hannastselmashok/.dbt', 'log_format': 'default', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt test', 'version_check': 'True', 'quiet': 'False', 'fail_fast': 'False', 'target_path': 'None', 'cache_selected_only': 'False', 'write_json': 'True', 'static_parser': 'True'}
+[0m19:50:56.630778 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/hannastselmashok/Desktop/da/snowflake/hero/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m19:50:56.631088 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 0.03787125, "process_in_blocks": "0", "process_kernel_time": 0.07773, "process_mem_max_rss": "107806720", "process_out_blocks": "0", "process_user_time": 0.463252}
+[0m19:50:56.631277 [debug] [MainThread]: Command `dbt test` failed at 19:50:56.631240 after 0.04 seconds
+[0m19:50:56.631400 [debug] [MainThread]: Flushing usage events
