@@ -1,5 +1,6 @@
 models:
   - name: dim_listings_cleansed
+    description: Cleansed dimension table for Airbnb listings
     data_tests:
       - minimum_row_count:
           arguments:
@@ -7,13 +8,14 @@ models:
           severity: error
 
     columns:
-
      - name: listing_id
+       description: Unique identifier for each listing
        data_tests:
          - unique
          - not_null
 
      - name: host_id
+       description: Unique identifier for each host
        data_tests:
          - not_null
          - relationships:
@@ -22,6 +24,7 @@ models:
                field: host_id
 
      - name: room_type
+       description: Type of room offered in the listing
        data_tests:
          - accepted_values:
              arguments:
@@ -30,7 +33,8 @@ models:
                         'Shared room',
                         'Hotel room']
 
-     - name: minimum_nights
+     - name: minimum_nights 
+       description: '{{ doc("dim_listing_cleansed__minimum_nights") }}'
        data_tests:
          - positive_values
 
