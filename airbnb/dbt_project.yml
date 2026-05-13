@@ -33,6 +33,8 @@ on-run-start:
   - "create table if not exists {{ target.schema }}.audit_log ( model_name string, run_timestamp timestamp)"
 
 models:
+  resource-path:
+    +static_analysis: strict
   airbnb:
     +grants:
       select: ["transform", "reporter"]
