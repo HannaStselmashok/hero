@@ -14,6 +14,3 @@ airbnb:
       threads: 1
       warehouse: COMPUTE_WH
   target: dev
-
-config:
-  send_anonymous_usage_stats: false
